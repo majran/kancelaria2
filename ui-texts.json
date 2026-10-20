@@ -1,0 +1,41 @@
+{
+  "pageTitle": "Kancelaria Notarialna Monika Maj | Notariusz Banino",
+  "pageDescription": "Informacje o Kancelarii Notarialnej Moniki Maj w Baninie: adres, godziny urzędowania, dostępność, zakres czynności notarialnych i kontakt.",
+  "loadError": "Nie udało się załadować treści strony. Odśwież stronę lub zadzwoń pod numer 574 637 761.",
+  "themeLight": "Włącz jasny motyw",
+  "themeDark": "Włącz ciemny motyw",
+  "menuOpen": "Otwórz menu",
+  "menuClose": "Zamknij menu",
+  "mapTitle": "Mapa Google — dojazd do kancelarii w Baninie",
+  "mapAccepted": "Mapa Google została załadowana po wyrażeniu zgody na cookies marketingowe.",
+  "mapRejected": "Mapa zewnętrzna nie została załadowana — brak zgody marketingowej.",
+  "cookie": {
+    "modalTitle": "Ustawienia plików cookies",
+    "modalDescription": "Pliki niezbędne są wymagane do działania strony. Za Twoją zgodą możemy też użyć cookies analitycznych i marketingowych, w tym załadować mapę Google.",
+    "acceptAll": "Zaakceptuj wszystkie",
+    "rejectAll": "Odrzuć wszystkie",
+    "settings": "Ustawienia",
+    "privacy": "Informacja o prywatności",
+    "preferencesTitle": "Preferencje cookies",
+    "save": "Zapisz ustawienia",
+    "close": "Zamknij",
+    "necessaryTitle": "Niezbędne",
+    "necessaryDescription": "Wymagane do działania strony i zawsze włączone.",
+    "analyticsTitle": "Analityczne",
+    "analyticsDescription": "Domyślnie wyłączone. Umożliwiają analizę korzystania ze strony.",
+    "marketingTitle": "Marketingowe",
+    "marketingDescription": "Domyślnie wyłączone. Wymagane m.in. do załadowania mapy Google.",
+    "moreTitle": "Więcej informacji",
+    "moreDescription": "Możesz w każdej chwili zmienić zgodę przez „Ustawienia cookies” w stopce."
+  },
+  "contact": {
+    "subject": "Zapytanie o czynność notarialną",
+    "name": "Imię",
+    "email": "Email",
+    "phone": "Telefon",
+    "message": "Wiadomość"
+  },
+  "email": "kancelaria@notariuszmaj.pl",
+  "address": "Borowiecka 3/2, 80-297 Banino",
+  "mapUrl": "https://www.google.com/maps?q="
+}
