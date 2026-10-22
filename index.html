@@ -3,10 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Kontakt i dojazd do Kancelarii Notarialnej Moniki Maj w Baninie.">
     <meta name="theme-color" content="#102235">
-    <title></title>
-
+    <title>Kontakt i dojazd | Kancelaria Notarialna Monika Maj</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -32,73 +31,63 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.css">
     <style>
-      :root {
-        color-scheme: light;
-        --cc-bg: #102235;
-        --cc-primary-color: #fff;
-        --cc-secondary-color: #e4e9ee;
-        --cc-btn-primary-bg: #b99a61;
-        --cc-btn-primary-color: #102235;
-        --cc-btn-secondary-bg: #23394c;
-        --cc-btn-secondary-color: #fff;
-        --cc-toggle-on-bg: #b99a61;
-        --cc-toggle-off-bg: #667381;
-        --cc-cookie-category-block-bg: #1a3043;
-        --cc-cookie-category-block-bg-hover: #23394c;
-        --cc-separator-border-color: rgba(255,255,255,.16);
-      }
-      html { scroll-behavior: smooth; }
       body { font-family: Inter, Arial, sans-serif; }
-      h1, h2, h3, .serif { font-family: "Playfair Display", Georgia, serif; }
-      section[id], article[id] { scroll-margin-top: 7rem; }
+      h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; }
       :focus-visible { outline: 3px solid #8d6b2d; outline-offset: 3px; }
-      .hero {
+      .map-panel {
         background:
-          linear-gradient(90deg, rgba(11,25,39,.86), rgba(11,25,39,.64)),
-          url("pokoj.jpg") center 55% / cover no-repeat;
-      }
-      .map-placeholder { background: linear-gradient(135deg, #e5ebef, #d6e0e7); }
-      .polish-emblem {
-        filter: brightness(0) saturate(100%) invert(10%) sepia(39%) saturate(1337%) hue-rotate(169deg) brightness(91%) contrast(95%);
-      }
-      .theme-toggle[aria-pressed="true"] .theme-light { display: none; }
-      .theme-toggle[aria-pressed="false"] .theme-dark { display: none; }
-      html[data-theme="dark"] { color-scheme: dark; }
-      html[data-theme="dark"] body { background: #101c28; color: #edf1f4; }
-      html[data-theme="dark"] header,
-      html[data-theme="dark"] .surface { background-color: #172635 !important; border-color: #344453 !important; }
-      html[data-theme="dark"] .surface-soft,
-      html[data-theme="dark"] .bg-slate-100,
-      html[data-theme="dark"] .bg-slate-50,
-      html[data-theme="dark"] .bg-\[\#edf2f5\],
-      html[data-theme="dark"] .bg-\[\#f2f6f8\] { background-color: #122230 !important; }
-      html[data-theme="dark"] .text-navy,
-      html[data-theme="dark"] .text-ink,
-      html[data-theme="dark"] .text-slate-700,
-      html[data-theme="dark"] .text-slate-800 { color: #edf1f4 !important; }
-      html[data-theme="dark"] .text-slate-600,
-      html[data-theme="dark"] .text-slate-500,
-      html[data-theme="dark"] .text-quiet { color: #c1ccd5 !important; }
-      html[data-theme="dark"] .border-slate-200,
-      html[data-theme="dark"] .border-slate-300 { border-color: #3a4a58 !important; }
-      html[data-theme="dark"] input,
-      html[data-theme="dark"] textarea { background: #10202e !important; color: #f4f6f8 !important; border-color: #526170 !important; }
-      html[data-theme="dark"] .bg-gold.text-navy,
-      html[data-theme="dark"] a.bg-gold,
-      html[data-theme="dark"] button.bg-gold { color: #102235 !important; }
-      html[data-theme="dark"] .map-placeholder { background: #243746; }
-      html[data-theme="dark"] .map-placeholder iframe { filter: grayscale(.15); }
-      html[data-theme="dark"] .polish-emblem { filter: brightness(0) invert(1); }
-      @media (prefers-reduced-motion: reduce) {
-        *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+          radial-gradient(circle at 50% 42%, rgba(185,154,97,.2), transparent 24%),
+          linear-gradient(135deg, #e5ebef, #d6e0e7);
       }
     </style>
   </head>
-  <body class="bg-paper text-ink antialiased">
-    <div id="site-content"></div>
-    <script src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.umd.js"></script>
-    <script src="app.js" defer></script>
+  <body class="min-h-screen bg-paper text-ink antialiased">
+    <main>
+      <section id="kontakt" class="py-16 sm:py-20">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="max-w-3xl">
+            <p class="mb-3 text-xs font-bold uppercase tracking-[.18em] text-gold">Kontakt i dojazd</p>
+            <h1 class="font-serif text-3xl text-navy sm:text-4xl">Kancelaria Notarialna Monika Maj — Banino</h1>
+            <p class="mt-4 leading-7 text-quiet">Zapraszamy do kontaktu telefonicznego lub mailowego w sprawie czynności notarialnych, dokumentów i opłat.</p>
+          </div>
+
+          <div class="mt-8 grid gap-6 lg:grid-cols-2">
+            <section class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
+              <h2 class="text-xl font-semibold text-navy">Dane kancelarii</h2>
+              <address class="mt-5 space-y-4 not-italic leading-7 text-quiet">
+                <p><strong class="text-navy">Adres:</strong> ul. Borowiecka 3/2, 80-297 Banino</p>
+                <p><strong class="text-navy">Telefon:</strong> <a class="underline decoration-gold underline-offset-4 hover:text-gold" href="tel:+48574637761">574 637 761</a></p>
+                <p><strong class="text-navy">E-mail:</strong> <a class="underline decoration-gold underline-offset-4 hover:text-gold" href="mailto:kancelaria@notariuszmaj.pl">kancelaria@notariuszmaj.pl</a></p>
+                <p><strong class="text-navy">Godziny urzędowania:</strong> poniedziałek–piątek, 10:00–16:00</p>
+                <p><strong class="text-navy">Dostępność telefoniczna:</strong> poniedziałek–piątek, 10:00–20:00</p>
+                <p>Wizyty w sobotę po wcześniejszym kontakcie telefonicznym. Lokal dostępny dla osób z niepełnosprawnościami; dostępny parking.</p>
+              </address>
+              <a href="https://share.google/uEALmeejNwwoGh4vM" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex rounded-lg bg-navy px-5 py-3 font-semibold text-white hover:bg-slate-700">
+                Otwórz mapę i trasę dojazdu
+              </a>
+            </section>
+
+            <section class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm" aria-labelledby="directions-heading">
+              <h2 id="directions-heading" class="sr-only">Mapa dojazdu do kancelarii</h2>
+              <iframe
+                class="h-72 w-full border-0 sm:h-80"
+                title="Mapa Google — Kancelaria Notarialna Monika Maj, ul. Borowiecka 3/2, Banino"
+                src="https://www.google.com/maps?q=Kancelaria%20Notarialna%20Monika%20Maj%2C%20ul.%20Borowiecka%203%2F2%2C%2080-297%20Banino&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
+              <div class="p-6 text-center">
+                <p class="text-sm leading-6 text-quiet">ul. Borowiecka 3/2, 80-297 Banino. Jesteśmy naprzeciwko Rossmanna i Pepco, obok Żabki. Przy kancelarii dostępny jest parking.</p>
+                <a href="https://share.google/uEALmeejNwwoGh4vM" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex rounded-lg border border-navy px-5 py-3 font-semibold text-navy hover:border-gold hover:text-gold">
+                  Wyznacz trasę w Google Maps
+                </a>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
