@@ -8,38 +8,42 @@
             <svg aria-hidden="true" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 4h4l2 5-3 2a15 15 0 006 6l2-3 5 2v4a2 2 0 01-2 2A17 17 0 013 6a2 2 0 012-2z"/></svg>
             574 637 761
           </a>
-          <a class="text-white/80 hover:text-goldLight" href="mailto:kancelaria@notariuszmaj.pl">kancelaria@notariuszmaj.pl</a>
-          <span class="inline-flex items-center gap-2 text-white/85">
-            <svg aria-hidden="true" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            Otwarte: pon.–pt. 10:00–16:00
-          </span>
+          <a class="inline-flex items-center gap-2 text-white/80 hover:text-goldLight" href="mailto:kancelaria@notariuszmaj.pl">
+            <svg aria-hidden="true" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path stroke-linecap="round" stroke-linejoin="round" d="m3 7 9 6 9-6"/></svg>
+            kancelaria@notariuszmaj.pl
+          </a>
         </div>
-        <p class="text-white/80">Telefonicznie: pon.–pt. 10:00–20:00</p>
       </div>
     </div>
 
     <!-- Nawigacja -->
     <header class="surface sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur">
-      <div class="mx-auto flex min-h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-        <a href="#top" class="flex shrink-0 items-center gap-3" aria-label="Kancelaria Notarialna Monika Maj — strona główna">
-          <span class="grid h-[5.5rem] w-[5.5rem] shrink-0 place-items-center" aria-label="Srebrne godło Polski">
+      <div class="mx-auto flex min-h-16 max-w-7xl items-center justify-between gap-2 px-3 sm:min-h-20 sm:gap-4 sm:px-6 lg:px-8">
+        <a href="#top" class="flex min-w-0 items-center gap-2 sm:gap-3" aria-label="Kancelaria Notarialna Monika Maj — strona główna">
+          <span class="grid h-12 w-12 shrink-0 place-items-center sm:h-14 sm:w-14 lg:h-[5.5rem] lg:w-[5.5rem]" aria-label="Srebrne godło Polski">
             <img
               src="godlo.svg"
               alt="Godło Rzeczypospolitej Polskiej"
-              class="polish-emblem h-16 w-16 object-contain"
+              class="polish-emblem h-10 w-10 object-contain sm:h-12 sm:w-12 lg:h-16 lg:w-16"
               width="64"
               height="64"
             >
           </span>
-          <span>
-            <span class="block text-lg font-bold uppercase tracking-[.16em] text-navy">Kancelaria Notarialna</span>
-            <span class="block text-md text-quiet">Monika Maj</span>
+          <span class="min-w-0">
+            <span class="block whitespace-nowrap text-[.7rem] font-bold uppercase leading-4 tracking-[.06em] text-navy sm:text-lg sm:leading-6 sm:tracking-[.16em]">Kancelaria Notarialna</span>
+            <span class="block text-sm text-quiet sm:text-base">Monika Maj Notariusz</span>
           </span>
         </a>
 
         <nav aria-label="Nawigacja główna" class="hidden items-center gap-6 text-sm font-medium text-slate-700 lg:flex">
-          <a href="#top" class="hover:text-gold">Strona główna</a>
+          <a href="#top" class="inline-flex items-center hover:text-gold" aria-label="Strona główna" title="Strona główna">
+            <svg aria-hidden="true" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-6v-7h-4v7H4a1 1 0 0 1-1-1V10z"/>
+            </svg>
+            <span class="sr-only">Strona główna</span>
+          </a>
           <a href="#o-kancelarii" class="hover:text-gold">O kancelarii</a>
+          <a href="#o-mnie" class="hover:text-gold">O mnie</a>
           <div class="relative" id="serviceDropdown">
             <button id="serviceDropdownButton" type="button" class="inline-flex items-center gap-1 hover:text-gold" aria-expanded="false" aria-controls="serviceDropdownMenu">
               Zakres usług
@@ -62,7 +66,7 @@
         </nav>
 
         <div class="flex items-center gap-2">
-          <button id="themeToggle" type="button" class="theme-toggle inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-300 text-navy" aria-label="Zmień motyw" aria-pressed="false" title="Zmień motyw">
+          <button id="themeToggle" type="button" class="theme-toggle inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-slate-300 text-navy sm:h-10 sm:w-10" aria-label="Zmień motyw" aria-pressed="false" title="Zmień motyw">
             <svg class="theme-light h-5 w-5" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path stroke-linecap="round" d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
             <svg class="theme-dark h-5 w-5" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M20.5 15.5A8.5 8.5 0 018.5 3.5 8.5 8.5 0 1020.5 15.5z"/></svg>
           </button>
@@ -70,7 +74,7 @@
             <svg aria-hidden="true" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 4h4l2 5-3 2a15 15 0 006 6l2-3 5 2v4a2 2 0 01-2 2A17 17 0 013 6a2 2 0 012-2z"/></svg>
             Zadzwoń teraz
           </a>
-          <button id="menuToggle" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-300 text-navy lg:hidden" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobileMenu">
+          <button id="menuToggle" type="button" class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-slate-300 text-navy sm:h-10 sm:w-10 lg:hidden" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobileMenu">
             <svg aria-hidden="true" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
           </button>
         </div>
@@ -79,6 +83,7 @@
         <div class="mx-auto flex max-w-7xl flex-col gap-4 text-sm font-medium">
           <a href="#top">Strona główna</a>
           <a href="#o-kancelarii">O kancelarii</a>
+          <a href="#o-mnie">O mnie</a>
           <a href="#uslugi">Zakres usług</a>
           <div class="ml-4 flex flex-col gap-3 border-l-2 border-gold/50 pl-4 text-quiet">
             <a href="#nieruchomosci">Nieruchomości</a>
@@ -99,18 +104,39 @@
     <main id="main">
       <!-- Sekcja główna -->
       <section id="top" class="hero text-white">
-        <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
+        <div id="heroSlider" class="absolute inset-0" aria-hidden="true">
+          <img data-hero-slide src="kancelaria0-web.jpg" alt="" class="absolute inset-0 h-full w-full object-cover object-center opacity-100 transition-opacity duration-700">
+          <img data-hero-slide src="kancelaria1-web.jpg" alt="" class="absolute inset-0 h-full w-full object-cover object-center opacity-0 transition-opacity duration-700">
+          <img data-hero-slide src="kancelaria2-web.jpg" alt="" class="absolute inset-0 h-full w-full object-cover object-center opacity-0 transition-opacity duration-700">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-navyDeep/85 to-navyDeep/60" aria-hidden="true"></div>
+        <div class="relative z-10 mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
           <div class="max-w-3xl">
             <p class="mb-5 text-xs font-semibold uppercase tracking-[.2em] text-goldLight">Kancelaria Notarialna · Banino</p>
-            <p class="mt-6 max-w-2xl text-base leading-7 text-white/90 sm:text-lg">
-              <p>Kancelaria Notarialna Monika Maj Notariusz w Baninie</p><br/>
-              <p>Informacje dotyczące dokonywanych czynności notarialnych, wymaganych dokumentów oraz wysokości związanych z nimi opłat można uzyskać bezpośrednio w siedzibie kancelarii, telefonicznie lub za pośrednictwem poczty elektronicznej.</p><br/>
+            <div class="mt-6 max-w-2xl space-y-4 text-justify text-base leading-7 text-white/90 sm:text-lg">
+              <p>Kancelaria Notarialna, Monika Maj Notariusz w Baninie</p>
+              <p>Informacje dotyczące dokonywanych czynności notarialnych, wymaganych dokumentów oraz wysokości związanych z nimi opłat można uzyskać bezpośrednio w siedzibie kancelarii, telefonicznie lub za pośrednictwem poczty elektronicznej.</p>
               <p>Godziny Urzędowania: poniedziałek-piątek 10:00 – 16:00 Inne terminy (w tym soboty) po wcześniejszym uzgodnieniu</p>
-            </p>
+            </div>
             <div class="mt-8 flex flex-wrap gap-4">
               <a href="#kontakt" class="rounded-lg bg-gold px-6 py-3.5 font-semibold text-navy hover:bg-goldLight">Umów wizytę</a>
               <a href="tel:+48574637761" class="rounded-lg border border-white/40 px-6 py-3.5 font-semibold text-white hover:border-goldLight hover:text-goldLight">Zadzwoń: 574 637 761</a>
             </div>
+          </div>
+        </div>
+        <div class="absolute inset-x-0 bottom-4 z-20 px-4 sm:px-6 lg:px-8">
+          <div class="mx-auto flex max-w-7xl items-center justify-end gap-2">
+            <button type="button" data-hero-prev class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/50 bg-navyDeep/50 text-white hover:bg-navyDeep/80" aria-label="Poprzednie zdjęcie">
+              <svg aria-hidden="true" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <div class="flex items-center gap-2" role="group" aria-label="Wybierz zdjęcie kancelarii">
+              <button type="button" data-hero-indicator="0" class="h-2.5 w-2.5 rounded-full bg-white ring-2 ring-white/70" aria-label="Pokaż zdjęcie 1 z 3" aria-pressed="true"></button>
+              <button type="button" data-hero-indicator="1" class="h-2.5 w-2.5 rounded-full bg-white/50 hover:bg-white" aria-label="Pokaż zdjęcie 2 z 3" aria-pressed="false"></button>
+              <button type="button" data-hero-indicator="2" class="h-2.5 w-2.5 rounded-full bg-white/50 hover:bg-white" aria-label="Pokaż zdjęcie 3 z 3" aria-pressed="false"></button>
+            </div>
+            <button type="button" data-hero-next class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/50 bg-navyDeep/50 text-white hover:bg-navyDeep/80" aria-label="Następne zdjęcie">
+              <svg aria-hidden="true" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m9 18 6-6-6-6"/></svg>
+            </button>
           </div>
         </div>
       </section>
@@ -120,11 +146,7 @@
         <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-8">
           <div>
             <p class="mb-3 text-xs font-bold uppercase tracking-[.18em] text-gold">O kancelarii</p>
-            <h2 class="serif text-3xl leading-tight text-navy sm:text-4xl">Kancelaria Notarialna Monika Maj w Baninie</h2>
-            <p class="mt-5 leading-7 text-quiet">
-              Notariusz działa jako osoba zaufania publicznego.<br/>
-Notariusz jest powołany do dokonywania czynności, którym strony są obowiązane lub pragną nadać formę notarialną
-            </p>
+            <h2 class="serif text-3xl leading-tight text-navy sm:text-4xl">Kancelaria Notarialna, <br/>Notariusz Monika Maj w Baninie</h2>
             <p class="mt-4 leading-7 text-quiet">
               Kancelaria znajduje się przy ul. Borowieckiej numer 3 lok. 2, 80-297 Banino.
             </p>
@@ -134,14 +156,14 @@ Notariusz jest powołany do dokonywania czynności, którym strony są obowiąza
             <p class="mt-4 leading-7 text-quiet">Możliwe jest umówienie wizyty w weekend po wcześniejszym kontakcie telefonicznym.</p>
           </div>
           <figure class="overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-sm">
-            <img src="image.png" alt="Budynek kancelarii notarialnej przy ulicy Borowieckiej w Baninie" class="h-72 w-full object-cover sm:h-96" loading="lazy">
+            <img src="budynek1.jpg" alt="Budynek kancelarii notarialnej przy ulicy Borowieckiej w Baninie" class="h-72 w-full object-cover sm:h-96" loading="lazy">
             <figcaption class="bg-white/90 px-4 py-3 text-sm text-slate-600">Budynek kancelarii przy ul. Borowieckiej 3/2 w Baninie.</figcaption>
           </figure>
         </div>
       </section>
 
       <!-- Zakres czynności -->
-      <section id="uslugi" class="surface-soft bg-slate-100 py-16 sm:py-20">
+      <section id="uslugi" class="py-16 sm:py-20">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div class="max-w-3xl">
             <p class="mb-3 text-xs font-bold uppercase tracking-[.18em] text-gold">Zakres czynności notarialnych</p>
@@ -184,7 +206,7 @@ Notariusz jest powołany do dokonywania czynności, którym strony są obowiąza
       </section>
 
       <!-- Opłaty -->
-      <section id="oplaty" class="py-16 sm:py-20">
+      <section id="oplaty" class="surface-soft bg-slate-100 py-16 sm:py-20">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div class="max-w-3xl">
             <p class="mb-3 text-xs font-bold uppercase tracking-[.18em] text-gold">Informacje praktyczne</p>
@@ -211,7 +233,7 @@ Notariusz jest powołany do dokonywania czynności, którym strony są obowiąza
       </section>
 
       <!-- FAQ -->
-      <section id="faq" class="surface-soft bg-slate-100 py-16 sm:py-20">
+      <section id="faq" class="py-16 sm:py-20">
         <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <p class="mb-3 text-xs font-bold uppercase tracking-[.18em] text-gold">FAQ</p>
           <h2 class="serif text-3xl text-navy sm:text-4xl">Najczęstsze pytania</h2>
@@ -256,8 +278,28 @@ Notariusz jest powołany do dokonywania czynności, którym strony są obowiąza
         </div>
       </section>
 
+            <!-- O mnie -->
+      <section id="o-mnie" class="surface-soft bg-slate-100 py-16 sm:py-20">
+        <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[7fr_3fr] lg:items-center lg:px-8">
+          <div>
+            <p class="mb-3 text-xs font-bold uppercase tracking-[.18em] text-gold">O mnie</p>
+            <h2 class="serif text-3xl leading-tight text-navy sm:text-4xl">Notariusz, Monika Maj</h2>
+            <div class="mt-5 space-y-4 leading-7 text-quiet">
+              <p>Notariat to dla mnie nie tylko zawód, ale również pasja, odpowiedzialność i misja oparta na zaufaniu.</p>
+              <p>Za każdą czynnością notarialną kryje się wiele godzin pracy, których nie widać na pierwszy rzut oka. Składa się na nią analiza dokumentów, weryfikacja stanu prawnego, wyjaśnianie wątpliwości oraz dbałość o to, aby podejmowane przez Państwa decyzje były świadome, a ich skutki prawne właściwie zabezpieczone. Bezpieczna i zgodna z prawem transakcja jest zwieńczeniem starannych przygotowań, wiedzy oraz doświadczenia.</p>
+              <p>Pracę notariusza traktuję jako swoją pasję, jednak wierzę, że dobry partner w relacjach zawodowych powinien być osobą otwartą, świadomą i wielowymiarową. Dlatego równie ważne jest dla mnie zachowanie równowagi między życiem zawodowym a osobistym oraz rozwijanie zainteresowań poza pracą. To one pozwalają zachować świeże spojrzenie, otwartość i zaangażowanie, które przekładają się również na jakość relacji z klientami.</p>
+              <p>Notariat jest zawodem zaufania publicznego o szczególnym charakterze, wymagającym nie tylko wiedzy prawniczej i precyzji, lecz także niezależności, bezstronności oraz najwyższych standardów etycznych. To właśnie odpowiedzialność, rzetelność i poszanowanie zasad wykonywania zawodu stanowią fundament zaufania, na którym opiera się moja praca.</p>
+            </div>
+          </div>
+          <figure class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+            <img src="monika_maj-web.jpg" alt="Monika Maj, notariusz" width="1001" height="1400" class="h-96 w-full object-cover object-center sm:h-[34rem]" loading="lazy">
+            <figcaption class="px-5 py-4 text-center font-semibold text-navy">Monika Maj Notariusz</figcaption>
+          </figure>
+        </div>
+      </section>
+
       <!-- Kontakt i dojazd -->
-      <section id="kontakt" class="py-16 sm:py-20">
+      <section id="kontakt" class="surface-soft bg-slate-100 py-16 sm:py-20">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div class="max-w-3xl">
             <p class="mb-3 text-xs font-bold uppercase tracking-[.18em] text-gold">Kontakt i dojazd</p>
@@ -271,9 +313,9 @@ Notariusz jest powołany do dokonywania czynności, którym strony są obowiąza
                 <p><strong class="text-navy">Telefon kancelarii:</strong> <a class="underline decoration-gold underline-offset-4" href="tel:+48574637761">574 637 761</a></p>
                 <p><strong class="text-navy">Godziny urzędowania:</strong> poniedziałek–piątek, 10:00–16:00</p>
                 <p><strong class="text-navy">Dostępność telefoniczna:</strong> poniedziałek–piątek, 10:00–20:00</p>
-                <p>Zadzwoń lub napisz. Opisz sprawę - ustalimy zakres czynności i dogodny termin.</p>
-                <p>Istnieje możliwość ustalenia indywidualnego terminu spotkania, również w soboty, po wcześniejszym uzgodnieniu z kancelarią.</p>
-                <p>Lokal dostępny dla osób z niepełnosprawnościami; dostępny parking.</p>
+                <p><strong class="text-navy">Rachunek kancelarii w mBanku:</strong><br><span class="tabular-nums">68 1140 2004 0000 3302 8689 4146</span></p>
+                <p><strong class="text-navy">Rachunek depozytowy:</strong><br><span class="tabular-nums">54 1140 2004 0000 3202 8691 7048</span></p>
+                <p class="mt-3">Istnieje możliwość ustalenia indywidualnego terminu spotkania, również w soboty, po wcześniejszym uzgodnieniu z kancelarią.</p>
               </address>
               <a href="https://share.google/uEALmeejNwwoGh4vM" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex rounded-lg border border-navy px-5 py-3 font-semibold text-navy hover:border-gold hover:text-gold">
                 Otwórz mapę i trasę dojazdu
@@ -281,8 +323,13 @@ Notariusz jest powołany do dokonywania czynności, którym strony są obowiąza
             </div>
 
             <div class="surface overflow-hidden rounded-2xl border border-slate-200 bg-white">
+              <div class="p-6 leading-7 text-quiet">
+                <p>Zadzwoń lub napisz. Opisz sprawę - ustalimy zakres czynności i dogodny termin.</p>
+                <p class="mt-3">Lokal dostępny dla osób z niepełnosprawnościami; dostępny parking.</p>
+              </div>
               <div id="mapPlaceholder" class="map-placeholder flex min-h-72 items-center justify-center p-7 text-center" aria-live="polite">
                 <div>
+              
                   <p class="font-semibold text-navy">Mapa dojazdu — Banino</p>
                   <p class="mt-2 max-w-sm text-sm leading-6 text-slate-700">Mapa Google ładuje się dopiero po wyrażeniu zgody na cookies marketingowe. Możesz też otworzyć mapę bezpośrednio w Google Maps.</p>
                   <button id="mapCookieSettings" type="button" class="mt-4 rounded-lg bg-navy px-4 py-2.5 text-sm font-semibold text-white hover:bg-slate-700">Ustawienia cookies</button>
