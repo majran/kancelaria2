@@ -1,11 +1,14 @@
 async function loadSite() {
   const contentRoot = document.getElementById('site-content');
+  const isEnglish = document.documentElement.lang === 'en';
+  const locale = isEnglish ? 'en' : 'pl';
+  const copyUrl = isEnglish ? 'ui-texts.en.json' : 'ui-texts.json';
   let copy;
 
   try {
     const [contentResponse, copyResponse] = await Promise.all([
       fetch('page-content.html'),
-      fetch('ui-texts.json')
+      fetch(copyUrl)
     ]);
     if (!contentResponse.ok || !copyResponse.ok) {
       throw new Error(`Nie można odczytać plików strony (${contentResponse.status}, ${copyResponse.status}).`);
@@ -14,12 +17,32 @@ async function loadSite() {
       copyResponse.json(),
       contentResponse.text()
     ]);
+    if (isEnglish) {
+      const translation = copy.translations;
+      const parsedContent = new DOMParser().parseFromString(contentRoot.innerHTML, 'text/html');
+      const walker = document.createTreeWalker(parsedContent.body, NodeFilter.SHOW_TEXT);
+      let textNode;
+      while ((textNode = walker.nextNode())) {
+        const original = textNode.nodeValue;
+        const trimmed = original.trim();
+        if (translation[trimmed]) {
+          textNode.nodeValue = original.replace(trimmed, translation[trimmed]);
+        }
+      }
+      parsedContent.body.querySelectorAll('*').forEach(element => {
+        for (const attribute of ['alt', 'aria-label', 'title']) {
+          const value = element.getAttribute(attribute);
+          if (value && translation[value]) element.setAttribute(attribute, translation[value]);
+        }
+      });
+      contentRoot.innerHTML = parsedContent.body.innerHTML;
+    }
     document.title = copy.pageTitle;
     document.querySelector('meta[name="description"]').content = copy.pageDescription;
   } catch (error) {
     console.error('Błąd ładowania treści strony:', error);
     try {
-      const response = await fetch('ui-texts.json');
+      const response = await fetch(copyUrl);
       if (response.ok) {
         copy = await response.json();
         contentRoot.textContent = copy.loadError;
@@ -29,6 +52,95 @@ async function loadSite() {
     }
     return;
   }
+
+  const hero = document.getElementById('top');
+  const languageSwitch = document.getElementById('languageSwitch');
+  if (languageSwitch && isEnglish) {
+    languageSwitch.href = 'index2.html';
+    languageSwitch.lang = 'pl';
+    languageSwitch.setAttribute('aria-label', 'Polski');
+    languageSwitch.title = 'Polski';
+    languageSwitch.innerHTML = `
+      <svg aria-hidden="true" class="h-4 w-6" viewBox="0 0 24 16">
+        <path fill="#fff" d="M0 0h24v16H0z"/>
+        <path fill="#dc143c" d="M0 8h24v8H0z"/>
+        <path fill="none" stroke="rgba(255,255,255,.5)" d="M.5.5h23v15H.5z"/>
+      </svg>
+      <span class="text-xs font-semibold uppercase">PL</span>
+    `;
+  }
+
+  const heroSlides = [...hero.querySelectorAll('[data-hero-slide]')];
+  const heroIndicators = [...hero.querySelectorAll('[data-hero-indicator]')];
+  const heroMotionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let activeHeroSlide = 0;
+  let heroTimer;
+  let heroPointerInside = false;
+  let heroHasFocus = false;
+
+  function showHeroSlide(index) {
+    activeHeroSlide = (index + heroSlides.length) % heroSlides.length;
+    heroSlides.forEach((slide, slideIndex) => {
+      const active = slideIndex === activeHeroSlide;
+      slide.classList.toggle('opacity-100', active);
+      slide.classList.toggle('opacity-0', !active);
+    });
+    heroIndicators.forEach((indicator, slideIndex) => {
+      const active = slideIndex === activeHeroSlide;
+      indicator.setAttribute('aria-pressed', String(active));
+      indicator.classList.toggle('bg-white', active);
+      indicator.classList.toggle('ring-2', active);
+      indicator.classList.toggle('ring-white/70', active);
+      indicator.classList.toggle('bg-white/50', !active);
+    });
+  }
+
+  function stopHeroTimer() {
+    window.clearInterval(heroTimer);
+    heroTimer = undefined;
+  }
+
+  function startHeroTimer() {
+    stopHeroTimer();
+    if (heroMotionPreference.matches || document.hidden || heroPointerInside || heroHasFocus) return;
+    heroTimer = window.setInterval(() => showHeroSlide(activeHeroSlide + 1), 4000);
+  }
+
+  hero.querySelector('[data-hero-prev]').addEventListener('click', () => {
+    showHeroSlide(activeHeroSlide - 1);
+    startHeroTimer();
+  });
+  hero.querySelector('[data-hero-next]').addEventListener('click', () => {
+    showHeroSlide(activeHeroSlide + 1);
+    startHeroTimer();
+  });
+  heroIndicators.forEach(indicator => {
+    indicator.addEventListener('click', () => {
+      showHeroSlide(Number(indicator.dataset.heroIndicator));
+      startHeroTimer();
+    });
+  });
+  hero.addEventListener('pointerenter', () => {
+    heroPointerInside = true;
+    stopHeroTimer();
+  });
+  hero.addEventListener('pointerleave', () => {
+    heroPointerInside = false;
+    startHeroTimer();
+  });
+  hero.addEventListener('focusin', () => {
+    heroHasFocus = true;
+    stopHeroTimer();
+  });
+  hero.addEventListener('focusout', event => {
+    if (!hero.contains(event.relatedTarget)) {
+      heroHasFocus = false;
+      startHeroTimer();
+    }
+  });
+  document.addEventListener('visibilitychange', startHeroTimer);
+  heroMotionPreference.addEventListener('change', startHeroTimer);
+  startHeroTimer();
 
   const consentApi = window.CookieConsent;
   const mapPlaceholder = document.getElementById('mapPlaceholder');
@@ -65,16 +177,15 @@ async function loadSite() {
         marketing: {}
       },
       language: {
-        default: 'pl',
+        default: locale,
         translations: {
-          pl: {
+          [locale]: {
             consentModal: {
               title: t.modalTitle,
               description: t.modalDescription,
               acceptAllBtn: t.acceptAll,
               acceptNecessaryBtn: t.rejectAll,
-              showPreferencesBtn: t.settings,
-              footer: `<a href="#privacy">${t.privacy}</a>`
+              showPreferencesBtn: t.settings
             },
             preferencesModal: {
               title: t.preferencesTitle,
