@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Kontakt i dojazd do Kancelarii Notarialnej w Baninie, Notariusz Monika Maj.">
+    <meta name="theme-color" content="#102235">
+    <title>Kontakt i dojazd | Kancelaria Notarialna, Monika Maj Notariusz w Baninie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: '#102235',
+              navyDeep: '#0b1927',
+              gold: '#b99a61',
+              goldLight: '#e0cfaa',
+              paper: '#f7f7f5',
+              ink: '#263443',
+              quiet: '#586675'
+            },
+            fontFamily: {
+              serif: ['Playfair Display', 'Georgia', 'serif'],
+              sans: ['Inter', 'Arial', 'sans-serif']
+            }
+          }
+        }
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body { font-family: Inter, Arial, sans-serif; }
+      h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; }
+      :focus-visible { outline: 3px solid #8d6b2d; outline-offset: 3px; }
+      .map-panel {
+        background:
+          radial-gradient(circle at 50% 42%, rgba(185,154,97,.2), transparent 24%),
+          linear-gradient(135deg, #e5ebef, #d6e0e7);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-paper text-ink antialiased">
+    <main>
+      <section id="kontakt" class="py-16 sm:py-20">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="max-w-3xl">
+            <p class="mb-3 text-xs font-bold uppercase tracking-[.18em] text-gold">Kontakt i dojazd</p>
+            <h1 class="font-serif text-3xl text-navy sm:text-4xl">Kancelaria Notarialna | Monika Maj Notariusz w Baninie</h1>
+            <p class="mt-4 leading-7 text-quiet">Zapraszamy do kontaktu telefonicznego lub mailowego w sprawie czynności notarialnych, dokumentów i opłat.</p>
+          </div>
+
+          <div class="mt-8 grid gap-6 lg:grid-cols-2">
+            <section class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
+              <h2 class="text-xl font-semibold text-navy">Dane kancelarii</h2>
+              <address class="mt-5 space-y-4 not-italic leading-7 text-quiet">
+                <p><strong class="text-navy">Adres:</strong> ul. Borowiecka 3/2, 80-297 Banino</p>
+                <p><strong class="text-navy">Telefon:</strong> <a class="underline decoration-gold underline-offset-4 hover:text-gold" href="tel:+48574637761">574 637 761</a></p>
+                <p><strong class="text-navy">E-mail:</strong> <a class="underline decoration-gold underline-offset-4 hover:text-gold" href="mailto:kancelaria@notariuszmaj.pl">kancelaria@notariuszmaj.pl</a></p>
+                <p><strong class="text-navy">Godziny urzędowania:</strong> poniedziałek–piątek, 10:00–16:00</p>
+                <p><strong class="text-navy">Dostępność telefoniczna:</strong> poniedziałek–piątek, 10:00–20:00</p>
+                <p><strong class="text-navy">Rachunek kancelarii w mBanku:</strong><br><span class="tabular-nums">68 1140 2004 0000 3302 8689 4146</span></p>
+                <p><strong class="text-navy">Rachunek depozytowy:</strong><br><span class="tabular-nums">54 1140 2004 0000 3202 8691 7048</span></p>
+                <p>Inne terminy (w tym soboty) po wcześniejszym uzgodnieniu. Lokal dostępny dla osób z niepełnosprawnościami; dostępny parking.</p>
+              </address>
+              <a href="https://share.google/uEALmeejNwwoGh4vM" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex rounded-lg bg-navy px-5 py-3 font-semibold text-white hover:bg-slate-700">
+                Otwórz mapę i trasę dojazdu
+              </a>
+            </section>
+
+            <section class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm" aria-labelledby="directions-heading">
+              <h2 id="directions-heading" class="sr-only">Mapa dojazdu do kancelarii</h2>
+              <iframe
+                class="h-72 w-full border-0 sm:h-80"
+                title="Mapa Google — Kancelaria Notarialna, Monika Maj Notariusz w Baninie, ul. Borowiecka 3/2, Banino"
+                src="https://www.google.com/maps?q=Kancelaria%20Notarialna%20Monika%20Maj%2C%20ul.%20Borowiecka%203%2F2%2C%2080-297%20Banino&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
+              <div class="p-6 text-center">
+                <p class="text-sm leading-6 text-quiet">ul. Borowiecka 3/2, 80-297 Banino. Jesteśmy naprzeciwko Rossmanna i Pepco, obok Żabki. Przy kancelarii dostępny jest parking.</p>
+                <a href="https://share.google/uEALmeejNwwoGh4vM" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex rounded-lg border border-navy px-5 py-3 font-semibold text-navy hover:border-gold hover:text-gold">
+                  Wyznacz trasę w Google Maps
+                </a>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
